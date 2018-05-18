@@ -1,6 +1,6 @@
 {application, tesla_api, [
     {description, "Tesla API library"},
-    {vsn, "0.1.0"},
+    {vsn, "1.0.0"},
     {registered, []},
     {applications, [
         kernel,
