@@ -325,7 +325,7 @@ get(Url, Headers) ->
             {RespCode, RespHeaders, jsx:decode(RespBody, [return_maps])}
     end.
 
--spec post(binary(), binary(), list()) -> api_return().
+-spec post(binary(), binary() | {form, list()}, list()) -> api_return().
 post(Url, Payload, Headers) ->
     {ok, RespCode, RespHeaders, Client} = hackney:request(post, <<?URL/binary , Url/binary>>, Headers, Payload, []),
     {ok, RespBody} = hackney:body(Client),
